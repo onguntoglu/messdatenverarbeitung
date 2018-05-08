@@ -1,0 +1,205 @@
+
+aufgabe2.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000176  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .signature    00000003  00840000  00840000  000001ea  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .debug_aranges 00000020  00000000  00000000  000001ed  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 00000054  00000000  00000000  0000020d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000138  00000000  00000000  00000261  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 00000101  00000000  00000000  00000399  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   0000015c  00000000  00000000  0000049a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000050  00000000  00000000  000005f8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000105  00000000  00000000  00000648  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00000013  00000000  00000000  0000074d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 66 00 	jmp	0xcc	; 0xcc <__ctors_end>
+   4:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+   8:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+   c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  10:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  14:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  18:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  1c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  20:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  24:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  28:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  2c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  30:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  34:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  38:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  3c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  40:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  44:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  48:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  4c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  50:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  54:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  58:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  5c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  60:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  64:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  68:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  6c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  70:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  74:	0c 94 80 00 	jmp	0x100	; 0x100 <__vector_29>
+  78:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  7c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  80:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  84:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  88:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  8c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  90:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  94:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  98:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  9c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  a0:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  a4:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  a8:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  ac:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  b0:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  b4:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  b8:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  bc:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  c0:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  c4:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  c8:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+
+000000cc <__ctors_end>:
+  cc:	11 24       	eor	r1, r1
+  ce:	1f be       	out	0x3f, r1	; 63
+  d0:	cf ef       	ldi	r28, 0xFF	; 255
+  d2:	d1 e2       	ldi	r29, 0x21	; 33
+  d4:	de bf       	out	0x3e, r29	; 62
+  d6:	cd bf       	out	0x3d, r28	; 61
+
+000000d8 <__do_copy_data>:
+  d8:	12 e0       	ldi	r17, 0x02	; 2
+  da:	a0 e0       	ldi	r26, 0x00	; 0
+  dc:	b2 e0       	ldi	r27, 0x02	; 2
+  de:	e6 e7       	ldi	r30, 0x76	; 118
+  e0:	f1 e0       	ldi	r31, 0x01	; 1
+  e2:	00 e0       	ldi	r16, 0x00	; 0
+  e4:	0b bf       	out	0x3b, r16	; 59
+  e6:	02 c0       	rjmp	.+4      	; 0xec <__do_copy_data+0x14>
+  e8:	07 90       	elpm	r0, Z+
+  ea:	0d 92       	st	X+, r0
+  ec:	a0 30       	cpi	r26, 0x00	; 0
+  ee:	b1 07       	cpc	r27, r17
+  f0:	d9 f7       	brne	.-10     	; 0xe8 <__do_copy_data+0x10>
+  f2:	0e 94 b0 00 	call	0x160	; 0x160 <main>
+  f6:	0c 94 b9 00 	jmp	0x172	; 0x172 <_exit>
+
+000000fa <__bad_interrupt>:
+  fa:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000fe <controlLEDs>:
+
+	else if(value <= 128 && value <= 511){
+
+	}
+
+}
+  fe:	08 95       	ret
+
+00000100 <__vector_29>:
+
+
+ISR(ADC_vect){
+ 100:	1f 92       	push	r1
+ 102:	0f 92       	push	r0
+ 104:	0f b6       	in	r0, 0x3f	; 63
+ 106:	0f 92       	push	r0
+ 108:	0b b6       	in	r0, 0x3b	; 59
+ 10a:	0f 92       	push	r0
+ 10c:	11 24       	eor	r1, r1
+ 10e:	8f 93       	push	r24
+ 110:	ef 93       	push	r30
+ 112:	ff 93       	push	r31
+	uint8_t theLowADC = ADCL; // first 8 bits from ADCL
+ 114:	80 91 78 00 	lds	r24, 0x0078
+	uint16_t theTenBitResults = (ADCH << 8) | theLowADC; // 2 more bits to achieve values up to 1023
+ 118:	80 91 79 00 	lds	r24, 0x0079
+	controlLEDs(theTenBitResults);	
+	ADCSRA |= (1 << ADSC);	
+ 11c:	ea e7       	ldi	r30, 0x7A	; 122
+ 11e:	f0 e0       	ldi	r31, 0x00	; 0
+ 120:	80 81       	ld	r24, Z
+ 122:	80 64       	ori	r24, 0x40	; 64
+ 124:	80 83       	st	Z, r24
+}
+ 126:	ff 91       	pop	r31
+ 128:	ef 91       	pop	r30
+ 12a:	8f 91       	pop	r24
+ 12c:	0f 90       	pop	r0
+ 12e:	0b be       	out	0x3b, r0	; 59
+ 130:	0f 90       	pop	r0
+ 132:	0f be       	out	0x3f, r0	; 63
+ 134:	0f 90       	pop	r0
+ 136:	1f 90       	pop	r1
+ 138:	18 95       	reti
+
+0000013a <init>:
+
+
+void init(void){
+	// initialize ADC and IO
+	ADMUX |= (0 <<  MUX4) | (0 <<  MUX3) | (0 <<  MUX2) | (0 <<  MUX1) | (0 <<  MUX0); // Single-ended input ADC0
+ 13a:	ec e7       	ldi	r30, 0x7C	; 124
+ 13c:	f0 e0       	ldi	r31, 0x00	; 0
+ 13e:	80 81       	ld	r24, Z
+ 140:	80 83       	st	Z, r24
+	ADMUX |= (1 << REFS1) | (1 << REFS0); // set internal reference for ADC, 2.56V
+ 142:	80 81       	ld	r24, Z
+ 144:	80 6c       	ori	r24, 0xC0	; 192
+ 146:	80 83       	st	Z, r24
+	ADCSRA |= (1 << ADEN); // enable ADC
+ 148:	ea e7       	ldi	r30, 0x7A	; 122
+ 14a:	f0 e0       	ldi	r31, 0x00	; 0
+ 14c:	80 81       	ld	r24, Z
+ 14e:	80 68       	ori	r24, 0x80	; 128
+ 150:	80 83       	st	Z, r24
+	ADCSRA |= (1 << ADPS2) | (0 << ADPS1) | (1 << ADPS0); // ADC-prescaler set to 1/32
+ 152:	80 81       	ld	r24, Z
+ 154:	85 60       	ori	r24, 0x05	; 5
+ 156:	80 83       	st	Z, r24
+	ADCSRA |= (1 << ADIE); // enable ADC interrupt
+ 158:	80 81       	ld	r24, Z
+ 15a:	88 60       	ori	r24, 0x08	; 8
+ 15c:	80 83       	st	Z, r24
+}
+ 15e:	08 95       	ret
+
+00000160 <main>:
+
+int main(void){
+
+	init(); // run func init()
+ 160:	0e 94 9d 00 	call	0x13a	; 0x13a <init>
+	sei();	// enable global interrupts
+ 164:	78 94       	sei
+	ADCSRA |= (1 << ADSC); // start ADC conversation
+ 166:	80 91 7a 00 	lds	r24, 0x007A
+ 16a:	80 64       	ori	r24, 0x40	; 64
+ 16c:	80 93 7a 00 	sts	0x007A, r24
+ 170:	ff cf       	rjmp	.-2      	; 0x170 <main+0x10>
+
+00000172 <_exit>:
+ 172:	f8 94       	cli
+
+00000174 <__stop_program>:
+ 174:	ff cf       	rjmp	.-2      	; 0x174 <__stop_program>
