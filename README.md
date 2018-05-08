@@ -13,10 +13,10 @@ Installation Instructions:
 3) When you create a project in AVR Studio, go to Project -> Configuration Options -> Custom Options
    -> UNCHECK "Use AVR Toolchain"
    
-   Manually select avr-gcc under: C:\WinAVR-20100110\bin\avr-gcc.exe
-   Manually select make under: C:\WinAVR-20100110\utils\bin\make.exe
+   - Manually select avr-gcc under: C:\WinAVR-20100110\bin\avr-gcc.exe
+   - Manually select make under: C:\WinAVR-20100110\utils\bin\make.exe
    
-   More information: https://stackoverflow.com/a/18770622
+   - More information: https://stackoverflow.com/a/18770622
    
 4) Download msys1.0.dll from https://github.com/onguntoglu/messdatenverarbeitung/blob/master/DLL/msys-1.0.dll
 
