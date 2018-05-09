@@ -1,0 +1,14 @@
+digraph "fifoInit"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="fifoInit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="filterInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__filter.html#ga678bf02b3f3b0ce7b5a493f21cf31887",tooltip="initialises the digital filter"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_d_v___p_r_8c.html#a840291bc02cba5474a4cb46a9b9566fe",tooltip="state of decimation unit"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="serialInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__serial.html#ga937cc2cfada75b0bede2fcb2adcdad2e",tooltip="initialises the serial port"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

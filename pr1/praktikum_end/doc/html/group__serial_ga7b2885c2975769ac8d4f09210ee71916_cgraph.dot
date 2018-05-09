@@ -1,0 +1,11 @@
+digraph "serialSendString"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="serialSendString",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="serialSendByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__serial.html#ga502d5813f57028a04bb85a92b94302a6",tooltip="writes a byte (8 Bit) the send-buffer"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="fifoPushByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__fifo.html#ga7f66fc4c1e2b86afea5c325ee45e60ec",tooltip="writes a byte to a FIFO-buffer"];
+}
