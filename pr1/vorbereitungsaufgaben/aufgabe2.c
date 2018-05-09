@@ -42,6 +42,8 @@ void init(void){
 	ADCSRA |= (1 << ADEN); // enable ADC
 	ADCSRA |= (1 << ADPS2) | (0 << ADPS1) | (1 << ADPS0); // ADC-prescaler set to 1/32
 	ADCSRA |= (1 << ADIE); // enable ADC interrupt
+	ADCSRA |= (1 << ADATE); // Auto-trigger enabled;
+	ADCSRB |= (0 << ADTS2) | (0 << ADTS1) | (0 << ADTS0); // free-running mode enabled
 }
 
 int main(void){
