@@ -9,4 +9,7 @@ void adcInit(){
 	ADCSRA |= (1 << ADATE); // Auto-trigger mdoe enabled
 	ADCSRA |= (1 << ADPS2) | (1 << ADPS0); // ADC-prescaler set to 1/32
 	ADCSRB |= (1 << ADTS2) | (1 << ADTS0); // Timer/Counter1 Compare-Match set 
+	ADCSRA |= (1 << ADIE); // enable ADC
+	ADCSRA |= (1 << ADEN); // enable ADC-Interrupt
+	ADCSRA |= (1 << ADSC); // start ADC-conversion
 }
