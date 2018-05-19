@@ -2,10 +2,10 @@
  * \addtogroup adc
  *
  * \file adc.c
- * \author Juergen Funck <juergen.funck@tu-berlin.de>
- * \date 2011-03-25
+ * \author Marjan Chowdhury, Onur Akdemir, Ongun Türkcüoglu, Serdar Gareayaghi
+ * \date 19-05-2018
  * ------------------------------------------------------
- * \brief functions to access the adc
+ * \brief functions to access the adc - MDV Praktikum 1, Termin 2
  */
 
 #include "adc.h"
@@ -24,13 +24,6 @@ ISR(TIMER1_COMPA_vect) {
 ISR(TIMER1_COMPB_vect) { 
 }
 
-/**
- * \fn ISR(ADC_vect)
- * \author Juergen Funck <juergen.funck@tu-berlin.de>
- * \date 2011-03-25
- * \brief Interrupt-Routine for the ADC-Interrupt. 
- *		  Gets called when an analog-to-digital conversion is complete
- */
 ISR(ADC_vect) {
 
 	counter++;
