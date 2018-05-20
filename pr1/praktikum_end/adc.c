@@ -28,15 +28,15 @@ ISR(ADC_vect) {
 
 	counter++;
 
-	uint16_t valADC = ADC;		// alternatively read result from ADC
-	uint16_t valADC_offset = valADC - 512;
-	filterWrite2Buf(valADC_offset);
+	uint16_t valADC = ADC;		// read result from ADC
+	uint16_t valADC_offset = valADC - 512; // offset of 512 bits
+	filterWrite2Buf(valADC_offset);	 // pass variable to the function
 
 	if(counter == sampleCountGlobal){
 		ADCSRA &= ~(1 << ADIE); // ADC-Interrupt turn off
 		TCCR1B &= ~((1 << CS10) | (1 << CS11) | (1 << CS12)); // turn off Timer
 		counter = 0;
-		sampleCountGlobal = 0;	// both set to 0
+		sampleCountGlobal = 0;	// both variables set to 0
 	}
 
 }
