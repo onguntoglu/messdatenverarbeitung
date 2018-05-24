@@ -30,8 +30,6 @@ U_aus = [volt10, volt100, volt500, volt1000, volt2000, volt3000, volt4000, volt5
 
 A=20.*log10(U_aus./14);
 
-freq_vec = logspace(0,5,length(A));
-
 frequenz=[10,100,500,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000];
 
 semilogx(frequenz,A)
