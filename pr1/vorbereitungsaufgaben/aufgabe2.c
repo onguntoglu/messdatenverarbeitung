@@ -9,29 +9,34 @@
 
 void controlLEDs(uint16_t value){
 	if(value >= 0 && value <= 127){
-		PORTC |= (0 << PC1) | (0 << PC2) | (0 << PC3);  // Turn off LEDs
+		PORTC |= (1<<PC1) | (1 << PC4) | (1 << PC5);
 	}
 
 	else if(value >= 128 && value <= 511){
-		PORTC |= (1 << PC1) | (0 << PC2) | (0 << PC3);  // Turn on red
+		PORTC &=  ~((1<<PC1) | (1 << PC4) | (1 << PC5));
+		PORTC |= (1 << PC1) | (1 << PC4);
+		// PC5 red, turn on red
 	}
 
 	else if(value >= 512 && value <= 768){
-		PORTC |= (1 << PC1) | (1 << PC2) | (0 << PC3);  // Turn on red and green
+		PORTC &=  ~((1<<PC1) | (1 << PC4) | (1 << PC5));
+		PORTC |= (1 << PC1);
+		// PC1 green
+		// PC5 red, turn on red and green
 	}
 
 	else if(value >= 769 && value <= 1023){
-		PORTC |= (1 << PC1) | (1 << PC2) | (1 << PC3); // Turn on red, green and orange
+		PORTC &=  ~((1<<PC1) | (1 << PC4) | (1 << PC5));
+		// PC4 orange
 	}
 
 }
 
 
 ISR(ADC_vect){
-	uint8_t theLowADC = ADCL; // first 8 bits from ADCL
-	uint16_t theTenBitResults = (ADCH << 8) | theLowADC; // 2 more bits to achieve values up to 1023
-	controlLEDs(theTenBitResults);	
-	ADCSRA |= (1 << ADSC);	
+	uint16_t resultADC = ADC; // read ADC
+	controlLEDs(resultADC);	
+	//ADCSRA |= (1 << ADSC);	
 }
 
 
@@ -52,8 +57,7 @@ int main(void){
 	sei();	// enable global interrupts
 	ADCSRA |= (1 << ADSC); // start ADC conversation
 
-	DDRC |= (1<<PC1);
-	PORTC |= (1<<PC1);
+	DDRC |= (1<<PC1) | (1 << PC4) | (1 << PC5);
 
 		while(1){
 		}

@@ -43,7 +43,9 @@ OBJECTS = aufgabe2.o
 LINKONLYOBJECTS = 
 
 ## Build
-all: $(TARGET) aufgabe2.hex aufgabe2.eep aufgabe2.lss## Compile
+all: $(TARGET) aufgabe2.hex aufgabe2.eep aufgabe2.lss size
+
+## Compile
 aufgabe2.o: ../aufgabe2.c
 	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
 
@@ -60,6 +62,10 @@ $(TARGET): $(OBJECTS)
 %.lss: $(TARGET)
 	avr-objdump -h -S $< > $@
 
+size: ${TARGET}
+	@echo
+	@avr-size -C --mcu=${MCU} ${TARGET}
+
 ## Clean target
 .PHONY: clean
 clean:
@@ -67,5 +73,5 @@ clean:
 
 
 ## Other dependencies
--include $(shell mkdir dep 2>NUL) $(wildcard dep/*)
+-include $(shell mkdir dep 2>/dev/null) $(wildcard dep/*)
 
