@@ -26,10 +26,18 @@ volt8000 = Code2Volt(max8000,65.5549,-9.8077);
 volt9000 = Code2Volt(max9000,65.5549,-9.8077);
 volt10000 = Code2Volt(max10000,65.5549,-9.8077);
 
+% realer Tiefpassfilter 8. Ordnung
 U_aus = [volt10, volt100, volt500, volt1000, volt2000, volt3000, volt4000, volt5000, volt6000, volt7000, volt8000, volt9000, volt10000];
-
 A=20.*log10(U_aus./14);
-
 frequenz=[10,100,500,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000];
-
-semilogx(frequenz,A)
+semilogx(frequenz,A);
+title('Amplitudenganganalyse');
+ylabel('Amplitude in dB');
+xlabel('Frequenz');
+grid on;
+hold on;
+% idealer Tiefpassfilter 8. Ordnung
+butter8 = mkfilter(3.1,8,'butterw');
+[magnitude_butter8, phase_butter8, wout_butter8] = bode(butter8, frequenz);
+magdb = 20*log10(magnitude_butter8);
+semilogx(frequenz, magdb)
