@@ -1,4 +1,5 @@
-% Werte aufnehmen
+% Werte aufnehmen/verarbeiten
+load('hz_values.mat');
 max10 = max(hz10) - min(hz10);
 max100 = max(hz100)- min(hz100);
 max500 = max(hz500) - min(hz500);
