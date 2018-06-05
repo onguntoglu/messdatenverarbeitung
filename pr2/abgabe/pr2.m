@@ -1,14 +1,16 @@
 %% Abgabeaufgaben
 %% Aufgabe 2
+clf
 fc = 3100; % cutoff frequency
 fs2 = 198330; % sampling rate
 normalized2 = fc/(fs2/2);
 [B2,A2] = butter(2,normalized2);
 freqz(B2,A2);
 title('Frequency Response of Butterworth-Filter 2. Ordnung')
-clf
+
 
 %% Aufgabe 3
+clf
 fs8 = 14747; % sampling rate
 normalized8 = fc/(fs8/2);
 [B8,A8] = butter(8,normalized8);
@@ -17,6 +19,8 @@ title('Frequency Response of Butterworth-Filter 8. Ordnung')
 
 %% Aufgabe 5
 % Kennlinien
+clf
+load('flanke.mat')
 x = Code2Volt(flanke,65.5549,-9.8077);
 scatter(x,flanke)
 grid on
@@ -32,9 +36,11 @@ plot(x,p3)
 title('ADU-Codierung')
 xlabel('Spannung in Volt')
 ylabel('Binary-Codes')
-legend('ADU-real','ADU-ideal','')
-clf
+legend('ADU-real-messpunkten','ADU-ideal','ADU-real','Location','northwest')
 
+
+%% SNR und ENOB
+clf
 % Differenz zwischen Flanke und Regressionsgraden bilden
 % digitale Binärcodes in Spannungsbereich transformieren
 c2v_p2 = Code2Volt(p3,65.5549,-9.8077);

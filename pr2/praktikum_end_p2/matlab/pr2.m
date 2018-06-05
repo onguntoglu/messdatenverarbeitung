@@ -25,7 +25,7 @@ x = Code2Volt(flanke,65.5549,-9.8077);
 plot(x,flanke)
 grid on
 hold on
-p = polyfit(x,flanke',1)
+p = polyfit(x,flanke',1);
 steigung_adu = p(1);
 offset_adu = p(2);
 steigung_theo = 1023/14;
