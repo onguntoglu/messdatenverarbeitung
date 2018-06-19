@@ -1,0 +1,5 @@
+fg = 1000;  % Grenzfreq
+fs = 15000; % Abtastfrequenz
+fenster = hanning(100);
+filter_koeff = FIRentwurf(1000,15000,fenster);
+
