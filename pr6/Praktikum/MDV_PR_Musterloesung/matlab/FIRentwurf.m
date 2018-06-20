@@ -6,7 +6,7 @@ n = length(wn);
 g_w = zeros(1,n);
 T = 1/fs;
 
-tau = T*(n/2);
+tau = (n/2);
 
 for k = 1:n 
     g_w(k) = wn(k)* (sin(2*pi*fg*((k-tau)*T)))/(pi*((k-tau)*T));    

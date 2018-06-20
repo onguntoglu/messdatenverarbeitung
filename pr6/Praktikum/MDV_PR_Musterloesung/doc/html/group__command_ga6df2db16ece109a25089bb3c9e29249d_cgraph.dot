@@ -1,0 +1,22 @@
+digraph "checkMessages"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="checkMessages",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="serialReadLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__serial.html#ga9f8b86188769661449d724fbe3560f74",tooltip="reads a line of the maximum length &#39;length&#39; from the receive buffer"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="serialReadByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__serial.html#gacd86b76722d76be6d34ad25d841c5e6b",tooltip="returns the first byte from the receive buffer. Blocks if no data is in the buffer."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="fifoPopByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__fifo.html#gacee477e69a1ee6a88b7c97a62867702e",tooltip="reads a byte form a FIFO-buffer (byte is deletet from the buffer)"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="adcStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc.html#gabc524700e7bcb90a38cc9146c5e29aba",tooltip="initializes the adc"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="serialSendString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__serial.html#ga7b2885c2975769ac8d4f09210ee71916",tooltip="writes a schreibt einen null-terminated string to the send-buffer"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="serialSendByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__serial.html#ga502d5813f57028a04bb85a92b94302a6",tooltip="writes a byte (8 Bit) the send-buffer"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="fifoPushByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__fifo.html#ga7f66fc4c1e2b86afea5c325ee45e60ec",tooltip="writes a byte to a FIFO-buffer"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}
