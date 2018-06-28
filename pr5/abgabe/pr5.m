@@ -20,7 +20,7 @@ grid on
 title('Single-Sided Amplitude Spectrum of Signal + Noise')
 xlabel('f (Hz)')
 ylabel('|P1(f)|')
-saveas(gcf,'p1_signalnoise.png')
+%saveas(gcf,'p1_signalnoise.png')
 figure(2)
 P1_signal = P1;
 for i=1:length(P1)
@@ -34,7 +34,7 @@ grid on
 title('Single-Sided Amplitude Spectrum of Signal')
 xlabel('f (Hz)')
 ylabel('|P1(f)|')
-saveas(gcf,'p1_signal.png')
+%saveas(gcf,'p1_signal.png')
 figure(3)
 P1_noise = P1;
 P1_noise(45) = 0;
@@ -44,7 +44,7 @@ grid on
 title('Single-Sided Amplitude Spectrum of Noise')
 xlabel('f (Hz)')
 ylabel('|P1(f)|')
-saveas(gcf,'p1_noise.png')
+%saveas(gcf,'p1_noise.png')
 
 %% Aufgabe 2
 nachabtast = DecimFilt(1,data_a1_volt,5);
@@ -67,7 +67,7 @@ grid on
 title('Single-Sided Amplitude Spectrum of Signal + Noise - Nachabtastung')
 xlabel('f (Hz)')
 ylabel('|P1(f)|')
-saveas(gcf,'p2_nachabtast.png')
+%saveas(gcf,'p2_nachabtast.png')
 
 
 %% Aufgabe 3
@@ -86,7 +86,7 @@ xlabel('Zeit [s]');
 ylabel('Amplitude [V]');
 title('Signal nach der FIR-Filterung');
 grid on
-saveas(gcf,'p3_signalfilter.png')
+%saveas(gcf,'p3_signalfilter.png')
 
 
 nachabtast_signalfilt = DecimFilt(1,signal_with_Filter,5);
@@ -109,7 +109,7 @@ grid on
 title('Spektrum - Signal mit FIR-Filterung - Nachabtastung')
 xlabel('f (Hz)')
 ylabel('|P1(f)|')
-saveas(gcf,'p3_signalfilternach.png')
+%saveas(gcf,'p3_signalfilternach.png')
 
 %% Aufgabe 4
 fg_filter = 1070;
