@@ -68,4 +68,9 @@ A=20.*log10(U_aus./14);
 
 frequenz=[10,100,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000];
 
+figure(1);
 plot(frequenz,A)
+xlabel('Frequenz in Hz');
+ylabel('Amplitudengang in dB');
+title('Amplitudenfrequenzgang');
+grid on;
