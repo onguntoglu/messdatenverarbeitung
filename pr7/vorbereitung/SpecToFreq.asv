@@ -1,8 +1,0 @@
-function output = SpecToFreq(signal, window, fs)
-    [s, f, t] = spectogram(signal, window, fs);
-    
-    dummy_vec = zeros(1,length(S(:,1
-
-
-end
-
