@@ -35,7 +35,7 @@ else
 end
 
 subplot(2,1,1)
-stem(f,BetragXf);
+plot(f,BetragXf);
 title('Magnitude');
 xlabel('Frequency in Hz');
 ylabel('Amplitudengang');
